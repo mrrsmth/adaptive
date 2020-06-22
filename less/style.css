@@ -1,0 +1,146 @@
+/*  .site-list__item a {
+  color: black;
+}
+.main-nav__list {
+  display: flex;
+  width: 680px;
+  li {
+    list-style: none;
+    margin-right: 20px;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      color:yellow;
+    }
+  }
+}
+.user-list {
+  display: flex;
+}
+.main-nav {
+  display: flex;
+} 
+.main-nav__wrapper {
+  display: flex;
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+  }
+}  
+ */
+/* Файл scaffolding.less */
+/* Файл scaffolding.less */
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Arial", sans-serif;
+  color: #f7f4f1;
+  font-style: normal;
+  background-color: #292929;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Файл mixins.less */
+/* Файл outlines.less */
+body {
+  background: #292929 url("img/bb-mobile.png") no-repeat 50% 0;
+  background-size: 720px auto;
+  min-height: 750px;
+}
+@media (min-width: 768px) {
+  body {
+    background: #292929 url("img/bb-tablet.png") no-repeat 50% 0;
+    background-size: 1178px auto;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background: #292929 url("img/bb-desktop.png") no-repeat 50% 0;
+    background-size: 1391px auto;
+  }
+}
+/* Файл blocks/page-header.less */
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+.page-header__logo {
+  height: 85px;
+}
+@media (min-width: 768px) {
+  .page-header__logo {
+    order: 2;
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__logo {
+    height: 648px;
+  }
+}
+.page-header,
+.page-header__logo {
+  outline: none;
+  background: transparent;
+}
+.page-header::before,
+.page-header__logo::before {
+  display: none;
+}
+.page-header__logo {
+  background: rgba(255, 255, 255, 0.5);
+}
+/* Файл blocks/main-nav.less */
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+}
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* Временно для сетки */
+  min-height: 50px;
+}
+.site-list {
+  /* Временно для сетки */
+  min-height: 255px;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+  }
+  .site-list {
+    width: 570px;
+    /* Временно для сетки */
+    min-height: 70px;
+  }
+  .user-list {
+    width: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav__wrapper {
+    width: 960px;
+  }
+  .site-list {
+    width: 780px;
+  }
+  .user-list {
+    width: 160px;
+  }
+}
